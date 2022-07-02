@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div id="click" style="background-color:red;border: 1px solid gray;margin:10px;padding: 10px">
+                <span>haz click!!!</span>
+            </div>
+            <div id="transform" style="background-color:white;border: 1px solid gray;margin:10px;padding: 10px">
+                <span>Cambiame</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        
+    <!-- Js funcion para cambiar de caja click a transform-->
+    <script>
+        
+        $(document).ready(()=>{
+            $("#click").click( ()=>{ 
+                $("#transform").css({"background-color" : "red", "height" : "300px"});
+                
+            });
+        });
+
+         //funcion para aparecer y desaparecer 
+        $(document).ready(()=>
+	    {
+	    $("#click").on( "click", () =>{	 
+	        $('#transform').toggle();
+	         });
+	    });
+
+
+    </script>
+</body>
+
+</html>
+

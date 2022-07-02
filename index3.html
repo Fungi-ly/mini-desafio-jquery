@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="flex justify-center items-center w-full h-screen bg-gray-400">
+        <div class="w-1/2 shadow-md rounded mx-2">
+            <div class="target flex justify-center items-center w-full h-16 border border-gray-700 bg-red-400 text-white font-bold text-xl">
+                <span>Pasa sobre mí</span>
+            </div>
+        </div>
+        <div class="w-1/2 shadow-md rounded mx-2">
+            <div class="flex justify-center items-center w-full h-auto border border-gray-700 text-white font-bold text-xl">
+                <ul class="w-full">
+                    <li class="impar default border border-black text-center border-dotted p-4">Elemento 1</li>
+                    <li class="par default border border-black text-center border-dotted p-4">Elemento 2</li>
+                    <li class="impar default border border-black text-center border-dotted p-4">Elemento 3</li>
+                    <li class="par default border border-black text-center border-dotted p-4">Elemento 4</li>
+                    <li class="impar default border border-black text-center border-dotted p-4">Elemento 5</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+<!-- js-->
+<script>
+    $(document).ready( ()=>{
+        $(".target").mouseover( ()=> { 
+            $(".impar").css("background-color" , "green");
+            $(".par").css("background-color" , "purple");
+        });
+        $(".target").mouseleave( ()=> { 
+            $(".default").css("background-color" , "grey");
+        });
+    });
+</script>
+</body>
+
+</html>
